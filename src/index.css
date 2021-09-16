@@ -11,10 +11,10 @@ body {
 }
 
 .App {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  background-image: url('./assets/cold-bg.jpeg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease;
 }
 
 .App.warm {
@@ -22,14 +22,10 @@ body {
 }
 
 main {
-  height: 100vh;
-  width: 60%;
+  min-height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
-  background-size: cover;
-  background-image: url('./assets/cold-bg.jpeg');
-  background-position: bottom;
-  transition: 0.4 ease-out;
   padding: 25px;
+
 }
 
 .search-box {
@@ -49,4 +45,60 @@ main {
 
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0 0 16px 16px;
+  margin-top: -25px;
+
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+  color: #313131;
+  font-size: 20px
+}
+
+.search-box .search-box:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-box .location {
+  margin-top: 150px;
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: #FFF;
+  font-size: 102px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
